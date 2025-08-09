@@ -4,8 +4,10 @@ RUN apk add --no-cache bash jq
 
 WORKDIR /app
 
-COPY final_algorithm.sh .
+COPY team_scheduling.sh .
 
-RUN chmod +x final_algorithm.sh
+RUN chmod +x team_scheduling.sh
 
-ENTRYPOINT ["./final_algorithm.sh"]
+ENTRYPOINT ["/bin/bash"]
+
+CMD ["./team_scheduling.sh"]

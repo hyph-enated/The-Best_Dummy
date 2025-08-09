@@ -1,6 +1,6 @@
 #!/bin/bash
 
-json_file="/app/data/data.json"
+json_file="$(pwd)/app/data/data.json"
 
 mkdir -p "$(dirname "$json_file")"
 
