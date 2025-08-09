@@ -1,4 +1,5 @@
 #!/bin/bash
+#Add Comments
 
 json_file="$(pwd)/app/data/data.json"
 
