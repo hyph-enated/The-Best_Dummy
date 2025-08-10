@@ -1,9 +1,9 @@
 #!/bin/bash
-#Add Comments
 
-json_file="$(pwd)/app/data/data.json"
+json_file="$(pwd)/data/data.json"
 
 mkdir -p "$(dirname "$json_file")"
+
 
 # Ensure JSON file exists
 if [ ! -s "$json_file" ]; then
@@ -30,8 +30,7 @@ add_to_json() {
   local name="$1"
   local shift="$2"
   local team="$3"
-
-  local entry
+ local entry
   entry=$(jq -n \
     --arg name "$name" \
     --arg shift "$shift" \

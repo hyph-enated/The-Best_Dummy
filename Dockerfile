@@ -1,13 +1,15 @@
 FROM alpine:latest
 
+# Install bash and any other dependencies
 RUN apk add --no-cache bash jq
 
 WORKDIR /app
 
-COPY team_scheduling.sh .
+# Copy your script
+COPY final_algorithm.sh .
 
-RUN chmod +x team_scheduling.sh
+# Make it executable
+RUN chmod +x final_algorithm.sh
 
-ENTRYPOINT ["/bin/bash"]
-
-CMD ["./team_scheduling.sh"]
+# Run it using bash
+CMD ["bash", "./final_algorithm.sh"]
